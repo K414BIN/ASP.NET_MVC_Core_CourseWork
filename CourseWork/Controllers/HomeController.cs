@@ -16,7 +16,7 @@ namespace CourseWork
         [HttpPost]
         public ActionResult Index(EmailModel model)
         {
-            using (MailMessage message = new MailMessage(model.FromEmail,model.FromPassword))
+            using (MailMessage message = new MailMessage(model.FromEmail,model.To))
             {
                 message.Subject = model.Subject;
                 message.Body = model.Body;  
